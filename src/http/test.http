@@ -7,23 +7,35 @@ Content-Type: application/json
   "password": "1234"
 }
 
-### 상품 등록
-POST http://localhost:8080/save/item?memberId=1
+
+### 상품 등록 1
+POST http://localhost:8080/api/save/item
 Content-Type: application/json
 
 {
-  "name": "item",
-  "description": "item2dfasd description",
+  "name": "item3",
+  "description": "item3는 좋아요",
   "price": 10000,
   "quantity": 10
 }
 
+### 상품 등록 2
+POST http://localhost:8080/api/save/item
+Content-Type: application/json
+
+{
+  "name": "item4",
+  "description": "item4는 별로에요",
+  "price": 222222,
+  "quantity": 222
+}
+
 ### 상품 조회
-GET http://localhost:8080/get?id=1
+GET http://localhost:8080/api/get/1
 
 
 ### 상품 수정
-PUT http://localhost:8080/update?id=1
+PUT http://localhost:8080/api/update/2
 Content-Type: application/json
 
 {
@@ -34,10 +46,10 @@ Content-Type: application/json
 }
 
 ### 상품 삭제
-DELETE http://localhost:8080/delete?id=3
+DELETE http://localhost:8080/api/delete/1
 
 ### 상품 전체 조회
-GET http://localhost:8080/getList
+GET http://localhost:8080/api/getList?page=1&seize=10
 
 ### 상품 전체 조회
-GET http://localhost:8080/getListByCond?name=&description=&price=200000&quantity=90
+GET http://localhost:8080/api/getListByCond?name=&description=&price=200000&quantity=90

@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Setter
@@ -18,6 +20,7 @@ public class Item {
     private String description;
     private int price;
     private int quantity;
+    private LocalDateTime createdAt;
 
 
     @JsonIgnore
@@ -32,6 +35,7 @@ public class Item {
         this.quantity = quantity;
         this.member = member;
         member.getItemList().add(this);
+        this.createdAt = LocalDateTime.now();
     }
 
 
