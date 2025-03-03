@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
 
     private final AuthService authService;
-    private final AppConfig appConfig;
+//    private final AppConfig appConfig;
     private final MemberService memberService;
 
     @GetMapping("/api/users/me")

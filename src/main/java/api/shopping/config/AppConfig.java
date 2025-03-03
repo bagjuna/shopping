@@ -7,6 +7,7 @@ import java.util.Base64;
 
 @Data
 @ConfigurationProperties(prefix = "juna")
+//@ConfigurationProperties(prefix = "hodol")
 public class AppConfig {
 
     private byte[] jwtKey;

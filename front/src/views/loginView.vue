@@ -3,21 +3,28 @@
 import {reactive} from "vue";
 import Login from "@/entity/user/Login.ts";
 import axios from "axios";
+import {ElMessage} from "element-plus";
+import type HttpError from "@/http/HttpError.ts";
+import {container} from "tsyringe";
+import UserRepository from "@/repository/UserRepository.ts";
 
 const state = reactive({
   login: new Login(),
 })
 
+const USER_REPOSITORY = container.resolve(UserRepository)
+
 function doLogin() {
-  console.log(state.login)
-  axios.post("/api/auth/login", state.login)
+
+  USER_REPOSITORY.login(state.login)
     .then(() => {
-      console.log("회원가입 성공")
+      ElMessage({ type: 'success', message: '환영합니다 :)' })
       location.href = '/'
     })
-    .catch(() => {
+    .catch((e: HttpError) => {
+      ElMessage({type: 'error', message: e.getMessage()});
       console.log("회원가입 실패")
-    })
+    });
 }
 
 function doSignUp() {
