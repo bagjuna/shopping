@@ -39,6 +39,7 @@ public class AuthController {
 
     @PostMapping("/api/auth/signup")
     public void signup(@RequestBody Signup signup) {
+        log.info("signup: {}", signup);
         authService.signup(signup);
     }
 

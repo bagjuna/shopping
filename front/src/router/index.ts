@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import SignUpView from "@/views/SignUpView.vue";
 import LoginView from "@/views/loginView.vue";
 import ItemReadView from '@/views/ItemReadView.vue';
+import WriteView from "@/views/WriteView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
       name: 'item',
       component: ItemReadView,
       props: true
+    },
+    {
+      path: "/write",
+      name: 'write',
+      component: WriteView
     }
   ],
 })

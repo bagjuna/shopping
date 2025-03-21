@@ -55,7 +55,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div class="signup-container">
+  <div class="wriete-container">
     <ul>
       <li v-for="item in state.itemList.items" :key="item.id">
         <div class="title">
@@ -91,7 +91,7 @@ onBeforeMount(() => {
 
 
 <style scoped lang="scss">
-.signup-container {
+.wriete-container {
   width: 300px; /* 모바일 가로 크기 정도로 가정 */
   margin: 0 auto;
   padding: 1rem;

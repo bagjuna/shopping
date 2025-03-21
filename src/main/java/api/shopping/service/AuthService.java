@@ -33,4 +33,6 @@ public class AuthService {
                 .build();
         memberRepository.save(user);
     }
+
+
 }

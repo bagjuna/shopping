@@ -34,7 +34,7 @@ function doSignUp() {
 </script>
 
 <template>
-  <div class="signup-container">
+  <div class="wriete-container">
   <el-row>
     <el-col :span="10" :offset="7">
       <el-form label-position="top">

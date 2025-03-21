@@ -51,7 +51,7 @@ function doSignUp() {
 </template>
 
 <style scoped>
-.signup-container {
+.wriete-container {
   width: 300px;
   margin: 0 auto;
   padding: 1rem;
